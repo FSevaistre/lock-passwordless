@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ReactTransitionGroup from 'react-addons-transition-group';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import ReactTransitionGroup from 'react-transition-group';
 import GlobalError from './global_error';
 import SubmitButton from './submit_button';
 import Header from '../header/header';
@@ -65,9 +64,9 @@ export default class Chrome extends React.Component {
           {footer}
         </Placeholder>
         {showSubmitButton && <SubmitButton ref="submit" color={primaryColor} disabled={disableSubmit} tabIndex={l.tabIndex(lock, 10)} />}
-        <ReactCSSTransitionGroup transitionName="slide" transitionEnterTimeout={350} transitionLeaveTimeout={350}>
+        <ReactTransitionGroup transitionName="slide" transitionEnterTimeout={350} transitionLeaveTimeout={350}>
           {auxiliaryPane}
-        </ReactCSSTransitionGroup>
+        </ReactTransitionGroup>
       </div>
     );
   }
